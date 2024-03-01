@@ -19,7 +19,7 @@ void UDialogueWidgetBase::SetOwningNPC(ANPC* InOwningNPC)                       
 void UDialogueWidgetBase::SendApiRequest(const FString& PlayerInput)
 {
    TSharedRef<IHttpRequest> HttpRequest = FHttpModule::Get().CreateRequest();                                                   //json object to create HTTP request 
-   HttpRequest->SetHeader(TEXT("Authorization"), TEXT("Bearer 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"));           //OpenAI's API Key authentication 
+   HttpRequest->SetHeader(TEXT("Authorization"), TEXT("API key"));           //OpenAI's API Key authentication 
    HttpRequest->SetHeader(TEXT("Content-Type"), TEXT("application/json"));                                                        
    HttpRequest->SetURL(TEXT("https://api.openai.com/v1/chat/completions"));                                                     //API endpoint URL
    HttpRequest->SetVerb(TEXT("POST"));                                                                                          //sending of data
